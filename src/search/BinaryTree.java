@@ -8,6 +8,7 @@ import java.util.LinkedList;
  * 这里只写了二叉树的三序遍历而已
  * 而且没写泛型
  * 其中后序循环有难度
+ * 增加了求树的深度算法
  */
 public class BinaryTree {
 
@@ -182,6 +183,14 @@ public class BinaryTree {
         }
     }
 
+    //二叉树深度计算
+    public static int height(Node t){
+        if(t == null)
+            return -1;
+
+        return Math.max(height(t.lt) , height(t.rt)) + 1;
+    }
+
     public static void main(String[] args) {
         Node root = initTree();
 
@@ -209,6 +218,8 @@ public class BinaryTree {
         printTreeInLastOrderByLoop(root);
         System.out.println();
 
+        System.out.println("树的深度:");
+        System.out.println(height(root));
 
     }
 

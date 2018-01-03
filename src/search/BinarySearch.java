@@ -3,6 +3,9 @@ package search;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * 二分查找
+ */
 public class BinarySearch {
 
     public static int binarySearch(int[] nums , int key){
